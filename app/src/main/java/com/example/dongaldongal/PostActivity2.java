@@ -24,7 +24,7 @@ public class PostActivity2 extends AppCompatActivity {
     String myJSON;
     JSONArray list = null;
     private static final String TAG_RESULTS = "result";
-    private static final String TAG_describe = "describe";
+    private static final String TAG_club_describe = "club_describe";
     private static final String TAG_name = "club_name";
 
 
@@ -39,7 +39,7 @@ public class PostActivity2 extends AppCompatActivity {
         TextView club_number = (TextView)findViewById(R.id.club_number);
         TextView club_name = (TextView)findViewById(R.id.club_name);
         TextView club_location = (TextView)findViewById(R.id.club_loaction);
-        //TextView club_describe = (TextView)findViewById(R.id.club_describe) ;
+        //TextView club_club_describe = (TextView)findViewById(R.id.club_club_describe) ;
 
 
         Intent intent = getIntent();
@@ -67,17 +67,17 @@ public class PostActivity2 extends AppCompatActivity {
             JSONObject jsonObj = new JSONObject(myJSON);
             list = jsonObj.getJSONArray(TAG_RESULTS);
             Log.i("log4","log4");
-            String describe =null;
+            String club_describe =null;
 
             for (int i = 0; i < list.length(); i++) {
 
                 JSONObject c = list.getJSONObject(i);
 
-                describe = c.getString(TAG_describe);
-                Log.i("describe",describe);
+                club_describe = c.getString(TAG_club_describe);
+                Log.i("club_describe",club_describe);
             }
-            TextView club_describe = (TextView)findViewById(R.id.club_describe) ;
-            club_describe.setText("동아리 소개"+"\n"+describe);
+            TextView describe = (TextView)findViewById(R.id.describe) ;
+            describe.setText("동아리 소개"+"\n"+describe);
 
         } catch (JSONException e) {
             e.printStackTrace();
