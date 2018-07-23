@@ -54,7 +54,7 @@ public class PostActivity2 extends AppCompatActivity {
         String number = club_number.getText().toString().substring(7);
         Log.i("club_number",number);
 
-        getData("http://ec2-18-221-90-55.us-east-2.compute.amazonaws.com/9.php",number);
+        getData("http://52.11.180.128/dbProject/9.php",number);
 
 
     }

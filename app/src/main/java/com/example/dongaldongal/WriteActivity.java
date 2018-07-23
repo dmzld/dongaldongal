@@ -121,7 +121,7 @@ public class WriteActivity extends AppCompatActivity {
                     String date = (String)params[4];
 
 
-                    String link = "http://ec2-18-221-90-55.us-east-2.compute.amazonaws.com/4.php";
+                    String link = "http://52.11.180.128/dbProject/4.php";
                     String data = URLEncoder.encode("student_id","UTF-8")+"="+URLEncoder.encode(student_id,"UTF-8");
                     data += "&" + URLEncoder.encode("title","UTF-8")+"="+URLEncoder.encode(title,"UTF-8");
                     data += "&" + URLEncoder.encode("club_name","UTF-8")+"="+URLEncoder.encode(club_name,"UTF-8");
