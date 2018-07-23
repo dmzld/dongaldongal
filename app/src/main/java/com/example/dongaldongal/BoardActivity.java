@@ -88,7 +88,7 @@ public class    BoardActivity extends AppCompatActivity {
 
 
 
-       getData("http://ec2-18-221-90-55.us-east-2.compute.amazonaws.com/3.php");
+       getData("http://52.11.180.128/dbProject/3.php");
 
     }
 

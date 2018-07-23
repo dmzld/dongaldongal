@@ -73,9 +73,9 @@ public class detailActivity extends AppCompatActivity {
         });
 
         if(category.equals("0"))
-        {getData("http://ec2-18-221-90-55.us-east-2.compute.amazonaws.com/6.php",category);}
+        {getData("http://52.11.180.128/dbProject/6_1.php",category);}
         else
-        {getData("http://ec2-18-221-90-55.us-east-2.compute.amazonaws.com/7.php",category);}
+        {getData("http://52.11.180.128/dbProject/7_1.php",category);}
 
     }
 
