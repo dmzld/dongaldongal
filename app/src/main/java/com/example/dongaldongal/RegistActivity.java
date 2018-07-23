@@ -187,7 +187,7 @@ public class RegistActivity extends AppCompatActivity {
                     String sex = (String)params[4];
                     String phonenum = (String)params[5];
 
-                    String link = "http://ec2-18-221-90-55.us-east-2.compute.amazonaws.com/2.php";
+                    String link = "http://52.11.180.128/dbProject/2.php";
                     String data = URLEncoder.encode("student_id","UTF-8")+"="+URLEncoder.encode(student_id,"UTF-8");
                     data += "&" + URLEncoder.encode("name","UTF-8")+"="+URLEncoder.encode(name,"UTF-8");
                     data += "&" + URLEncoder.encode("pwd","UTF-8")+"="+URLEncoder.encode(pwd,"UTF-8");
