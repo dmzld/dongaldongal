@@ -34,6 +34,7 @@ public class ClubDetailActivity2 extends AppCompatActivity {
     private static final String TAG_club_location="club_location";
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
