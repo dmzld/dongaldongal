@@ -39,7 +39,7 @@ public class PostActivity2 extends AppCompatActivity {
         TextView club_number = (TextView)findViewById(R.id.club_number);
         TextView club_name = (TextView)findViewById(R.id.club_name);
         TextView club_location = (TextView)findViewById(R.id.club_loaction);
-        //TextView club_club_describe = (TextView)findViewById(R.id.club_club_describe) ;
+        //TextView club_describe = (TextView)findViewById(R.id.club_describe) ;
 
 
         Intent intent = getIntent();
@@ -77,7 +77,7 @@ public class PostActivity2 extends AppCompatActivity {
                 Log.i("club_describe",club_describe);
             }
             TextView describe = (TextView)findViewById(R.id.describe) ;
-            describe.setText("동아리 소개"+"\n"+describe);
+            describe.setText("동아리 소개"+"\n"+club_describe);
 
         } catch (JSONException e) {
             e.printStackTrace();
