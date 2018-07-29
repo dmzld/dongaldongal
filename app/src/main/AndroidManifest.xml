@@ -30,7 +30,8 @@
         <activity android:name=".PostFestActivity" />
         <activity android:name=".SelectActivity" />
         <activity android:name=".ClubDetailActivity2" />
-        <activity android:name=".ClubBoardActivity"></activity>
+        <activity android:name=".ClubBoardActivity" />
+        <activity android:name=".ClubPostActivity"></activity>
     </application>
 
 </manifest>

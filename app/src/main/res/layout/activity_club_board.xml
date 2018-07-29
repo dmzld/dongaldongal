@@ -14,4 +14,12 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
         tools:text="동아리이름" />
+
+    <ListView
+        android:id="@+id/clubBoard"
+        android:layout_width="304dp"
+        android:layout_height="396dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22dp" />
 </RelativeLayout>
