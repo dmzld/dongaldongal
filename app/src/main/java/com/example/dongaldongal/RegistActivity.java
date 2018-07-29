@@ -39,7 +39,7 @@ public class RegistActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
 
-        etStudentID = (EditText) findViewById(R.id.student_id);
+        etStudentID = (EditText) findViewById(R.id.textInfo);
         etName= (EditText) findViewById(R.id.name);
         etName.setPrivateImeOptions("defaultInputmode=korea;");
         etPassword = (EditText) findViewById(R.id.password);
