@@ -4,6 +4,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -39,7 +41,8 @@ public class PostActivity2 extends AppCompatActivity {
         TextView club_number = (TextView)findViewById(R.id.club_number);
         TextView club_name = (TextView)findViewById(R.id.club_name);
         TextView club_location = (TextView)findViewById(R.id.club_loaction);
-        //TextView club_describe = (TextView)findViewById(R.id.club_describe) ;
+        //TextView club_describe = (TextView)findViewById(R.id.club_describe) ; //php단에서 셋팅
+        Button btnClubBoard = (Button)findViewById(R.id.btnClubBoard);
 
 
         Intent intent = getIntent();
@@ -55,6 +58,17 @@ public class PostActivity2 extends AppCompatActivity {
         Log.i("club_number",number);
 
         getData("http://52.11.180.128/dbProject/9.php",number);
+
+
+        //동아리게시판 버튼
+        btnClubBoard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),ClubBoardActivity.class);
+                intent.putExtra("club_name",intent.getStringExtra("name"));
+                startActivity(intent);
+            }
+        });
 
 
     }
