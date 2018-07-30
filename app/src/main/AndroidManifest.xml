@@ -28,6 +28,11 @@
         <activity android:name=".WriteFestActivity" />
         <activity android:name=".FestivalActivity" />
         <activity android:name=".PostFestActivity" />
+        <activity android:name=".SettingActivity"/>
+        <activity android:name=".StudentConfirm"/>
+        <activity android:name=".ChangePwd"/>
+        <activity android:name=".ChangePhonenum"/>
+        <activity android:name=".Unregister"/>
         <activity android:name=".SelectActivity"></activity>
         <activity android:name=".ClubDetailActivity2"></activity>
     </application>
