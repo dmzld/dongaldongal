@@ -78,6 +78,7 @@ public class SelectActivity extends AppCompatActivity {
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);//현재 TASK를 비우고 새로운 TASK 생성
                 startActivity(intent);
             }
+            //로그인 할때 얻어온 데이터 처리를 따로 해야하는가?
 
         });
     }
