@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingActivity"
+    android:layout_marginStart="50dp"
+    android:layout_marginTop="0dp">
+
+    <Button
+        android:id="@+id/btnPwd"
+        android:layout_width="95dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="60dp"
+        android:text="비밀번호 수정"
+        android:background="#2f5cff"
+        android:textColor="@android:color/background_light" />
+
+    <Button
+        android:id="@+id/btnPhonenum"
+        android:layout_width="95dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="150dp"
+        android:background="#2f5cff"
+        android:text="전화번호 수정"
+        android:textColor="@android:color/background_light" />
+
+    <Button
+        android:id="@+id/btnLeave"
+        android:layout_width="95dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="240dp"
+        android:background="#2f5cff"
+        android:text="회원탈퇴"
+        android:textColor="@android:color/background_light" />
+
+</RelativeLayout>
