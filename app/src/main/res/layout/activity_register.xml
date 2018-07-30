@@ -17,7 +17,7 @@
         android:inputType="textEmailAddress"
         android:ems="10"
         android:hint="StudentID"
-        android:id="@+id/student_id" />
+        android:id="@+id/textInfo" />
 
     <EditText
         android:id="@+id/name"

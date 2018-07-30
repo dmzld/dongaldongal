@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        student_id = (EditText) findViewById(R.id.student_id);
+        student_id = (EditText) findViewById(R.id.textInfo);
         password = (EditText) findViewById(R.id.password);
 
         btnRegist = (Button) findViewById(R.id.btnRegist);
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 Log.i("before","before");
 
-                getData("http://ec2-18-221-90-55.us-east-2.compute.amazonaws.com/1.php"); //수정 필요
+                getData("http://52.11.180.128/dbProject/1.php"); //수정 필요
                 Log.i("after","after");
 
 /*

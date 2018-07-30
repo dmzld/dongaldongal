@@ -60,12 +60,21 @@
         android:text="동아리위치" />
 
     <TextView
-        android:id="@+id/club_describe"
+        android:id="@+id/describe"
         android:layout_width="330dp"
         android:layout_height="156dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/club_phonenum"
-        android:layout_marginBottom="49dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
         android:text="동아리 설명" />
+
+    <Button
+        android:id="@+id/btnClubBoard"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/club_phonenum"
+        android:layout_marginBottom="13dp"
+        android:text="동아리게시판" />
 
 </RelativeLayout>

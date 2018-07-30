@@ -4,6 +4,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -24,7 +26,7 @@ public class PostActivity2 extends AppCompatActivity {
     String myJSON;
     JSONArray list = null;
     private static final String TAG_RESULTS = "result";
-    private static final String TAG_describe = "describe";
+    private static final String TAG_club_describe = "club_describe";
     private static final String TAG_name = "club_name";
 
 
@@ -39,7 +41,8 @@ public class PostActivity2 extends AppCompatActivity {
         TextView club_number = (TextView)findViewById(R.id.club_number);
         TextView club_name = (TextView)findViewById(R.id.club_name);
         TextView club_location = (TextView)findViewById(R.id.club_loaction);
-        //TextView club_describe = (TextView)findViewById(R.id.club_describe) ;
+        //TextView club_describe = (TextView)findViewById(R.id.club_describe) ; //php단에서 셋팅
+        Button btnClubBoard = (Button)findViewById(R.id.btnClubBoard);
 
 
         Intent intent = getIntent();
@@ -57,6 +60,17 @@ public class PostActivity2 extends AppCompatActivity {
         getData("http://52.11.180.128/dbProject/9.php",number);
 
 
+        //동아리게시판 버튼
+        btnClubBoard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),ClubBoardActivity.class);
+                intent.putExtra("club_name",intent.getStringExtra("name"));
+                startActivity(intent);
+            }
+        });
+
+
     }
 
 
@@ -67,17 +81,17 @@ public class PostActivity2 extends AppCompatActivity {
             JSONObject jsonObj = new JSONObject(myJSON);
             list = jsonObj.getJSONArray(TAG_RESULTS);
             Log.i("log4","log4");
-            String describe =null;
+            String club_describe =null;
 
             for (int i = 0; i < list.length(); i++) {
 
                 JSONObject c = list.getJSONObject(i);
 
-                describe = c.getString(TAG_describe);
-                Log.i("describe",describe);
+                club_describe = c.getString(TAG_club_describe);
+                Log.i("club_describe",club_describe);
             }
-            TextView club_describe = (TextView)findViewById(R.id.club_describe) ;
-            club_describe.setText("동아리 소개"+"\n"+describe);
+            TextView describe = (TextView)findViewById(R.id.describe) ;
+            describe.setText("동아리 소개"+"\n"+club_describe);
 
         } catch (JSONException e) {
             e.printStackTrace();

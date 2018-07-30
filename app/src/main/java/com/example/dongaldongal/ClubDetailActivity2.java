@@ -26,12 +26,13 @@ public class ClubDetailActivity2 extends AppCompatActivity {
     JSONArray list = null;
     private static final String TAG_RESULTS = "result";
 
-    private static final String TAG_club_in = "club_in";
+    private static final String TAG_club_describe = "club_describe";
     private static final String TAG_category = "category";
     private static final String TAG_phonenum="phonenum";
     private static final String TAG_rank="rank";
     private static final String TAG_club_number="club_number";
     private static final String TAG_club_location="club_location";
+
 
 
     @Override
@@ -62,7 +63,7 @@ public class ClubDetailActivity2 extends AppCompatActivity {
             list = jsonObj.getJSONArray(TAG_RESULTS);
             Log.i("log4","log4");
 
-            String club_in = null;
+            String club_describe = null;
             String category = null;
             String phonenum = null;
             String rank = null;
@@ -72,22 +73,22 @@ public class ClubDetailActivity2 extends AppCompatActivity {
 
             for (int i = 0; i < list.length(); i++) {
 
-                Log.i("log4","log5");
+                Log.i("log5","log5");
                 JSONObject c = list.getJSONObject(i);
 
                 //php에서 정보받기
-                club_in = c.getString(TAG_club_in);
+                club_describe = c.getString(TAG_club_describe);
                 category=c.getString(TAG_category);
                 phonenum=c.getString(TAG_phonenum);
                 rank=c.getString(TAG_rank);
                 club_number=c.getString(TAG_club_number);
                 club_location=c.getString(TAG_club_location);
 
-                Log.i("club_in",club_in);
+                Log.i("club_describe",club_describe);
             }
 
             /////텍스트에 넣기
-            TextView club_in_t = (TextView)findViewById(R.id.club_in) ;
+            TextView club_describe_t = (TextView)findViewById(R.id.club_describe) ;
             TextView category_t = (TextView)findViewById(R.id.category);
             TextView phonenum_t = (TextView)findViewById(R.id.phonenum);
             TextView rank_t = (TextView)findViewById(R.id.rank);
@@ -96,7 +97,7 @@ public class ClubDetailActivity2 extends AppCompatActivity {
 
 
 
-            club_in_t.setText("동아리 소개 "+"\n"+club_in);
+            club_describe_t.setText("동아리 소개 "+"\n"+club_describe);
             category_t.setText("분류 "+"\n"+category);
             phonenum_t.setText("연락처 "+"\n"+phonenum);
             rank_t.setText("등급 "+"\n"+rank);
@@ -105,7 +106,7 @@ public class ClubDetailActivity2 extends AppCompatActivity {
 
         } catch (JSONException e) {
             e.printStackTrace();
-            Log.i("club_in2","club_in2");
+            Log.i("club_describe","club_describe");
         }
     }
 
