@@ -11,9 +11,8 @@ public class PostActivity extends AppCompatActivity {
 
     //Intent intent;
     String text_club;
-    String text_title;
-    String text_content;
-    Date text_date;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

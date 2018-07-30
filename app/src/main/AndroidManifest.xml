@@ -28,8 +28,9 @@
         <activity android:name=".WriteFestActivity" />
         <activity android:name=".FestivalActivity" />
         <activity android:name=".PostFestActivity" />
-        <activity android:name=".SelectActivity"></activity>
-        <activity android:name=".ClubDetailActivity2"></activity>
+        <activity android:name=".SelectActivity" />
+        <activity android:name=".ClubDetailActivity2" />
+        <activity android:name=".ClubBoardActivity"></activity>
     </application>
 
 </manifest>

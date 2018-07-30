@@ -73,7 +73,7 @@ public class ClubDetailActivity2 extends AppCompatActivity {
 
             for (int i = 0; i < list.length(); i++) {
 
-                Log.i("log4","log5");
+                Log.i("log5","log5");
                 JSONObject c = list.getJSONObject(i);
 
                 //php에서 정보받기
