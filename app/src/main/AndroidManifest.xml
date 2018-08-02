@@ -33,11 +33,9 @@
         <activity android:name=".ChangePwd"/>
         <activity android:name=".ChangePhonenum"/>
         <activity android:name=".Unregister"/>
-        <activity android:name=".SelectActivity">
-        <activity android:name=".ClubDetailActivity2">
-        <activity android:name=".SelectActivity" />
+        <activity android:name=".SelectActivity"/>
         <activity android:name=".ClubDetailActivity2"/>
-        <activity android:name=".ClubBoardActivity"></activity>
+        <activity android:name=".ClubBoardActivity"/>
     </application>
 
 </manifest>
