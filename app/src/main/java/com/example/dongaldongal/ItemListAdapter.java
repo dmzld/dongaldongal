@@ -21,7 +21,7 @@ public class ItemListAdapter extends BaseAdapter {
         TextView text_writer;
         TextView text_title;
         TextView text_date;
-        //TextView text_content;
+        TextView text_content;
         ImageView image_club;
 
     }
@@ -49,27 +49,27 @@ public class ItemListAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup viewGroup) {
-        if(convertView==null){
+        if(convertView==null){ // 이전에 생성된 것이 없으면 생성 아니면 기존의 것 사용
             convertView = LayoutInflater.from(context).inflate(R.layout.item,null);
 
             viewHolder = new ViewHolder();
 
-            viewHolder.text_writer = (TextView)convertView.findViewById(R.id.text_club);
-            //viewHolder.text_content = (TextView)convertView.findViewById(R.id.text_content);
-            viewHolder.text_date = (TextView)convertView.findViewById(R.id.text_phone);
-            viewHolder.text_title  =(TextView)convertView.findViewById(R.id.text_name);
-            viewHolder.image_club = (ImageView)convertView.findViewById(R.id.image_club);
+            viewHolder.text_writer = (TextView)convertView.findViewById(R.id.writer);
+            viewHolder.text_content = (TextView)convertView.findViewById(R.id.content);
+            viewHolder.text_date = (TextView)convertView.findViewById(R.id.date);
+            viewHolder.text_title  =(TextView)convertView.findViewById(R.id.title);
+            viewHolder.image_club = (ImageView)convertView.findViewById(R.id.image);
             convertView.setTag(viewHolder);
         }
         else{
             viewHolder = (ViewHolder)convertView.getTag();
         }
 
-        viewHolder.text_writer.setText(list_itemArrayList.get(position).getText_club());
-        viewHolder.text_title.setText(list_itemArrayList.get(position).getText_title());
-        //viewHolder.text_content.setText(list_itemArrayList.get(position).getText_content());
-        viewHolder.text_date.setText(list_itemArrayList.get(position).getText_date().toString());
-        viewHolder.image_club.setImageResource(list_itemArrayList.get(position).getImage_club());
+        viewHolder.text_writer.setText(list_itemArrayList.get(position).getText1());
+        viewHolder.text_title.setText(list_itemArrayList.get(position).getText2());
+        viewHolder.text_content.setText(list_itemArrayList.get(position).getText3());
+        viewHolder.text_date.setText(list_itemArrayList.get(position).getText4().toString());
+        viewHolder.image_club.setImageResource(list_itemArrayList.get(position).getImage());
 
         return convertView;
     }

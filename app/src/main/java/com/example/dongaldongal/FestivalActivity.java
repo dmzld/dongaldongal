@@ -27,7 +27,7 @@ public class FestivalActivity extends AppCompatActivity {
     String myJSON;
     ListView listView;
     FestListAdapter festAdapter;
-    ArrayList<list_fest> list_festArrayList;
+    ArrayList<list_item> list_festArrayList;
 
 
     Button writeFest;
@@ -53,7 +53,7 @@ public class FestivalActivity extends AppCompatActivity {
 
 
         listView = (ListView) findViewById(R.id.festBoard);
-        list_festArrayList = new ArrayList<list_fest>();
+        list_festArrayList = new ArrayList<list_item>();
 
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -62,10 +62,10 @@ public class FestivalActivity extends AppCompatActivity {
 
                 //수정
                 Intent intent = new Intent(getApplicationContext(),PostFestActivity.class);
-                intent.putExtra("fest_name",list_festArrayList.get(position).getFest_name());
-                intent.putExtra("fest_club",list_festArrayList.get(position).getFest_club());
-                intent.putExtra("fest_date",list_festArrayList.get(position).getFest_date());
-                intent.putExtra("fest_describe",list_festArrayList.get(position).getFest_describe());
+                intent.putExtra("fest_name",list_festArrayList.get(position).getText1());
+                intent.putExtra("fest_club",list_festArrayList.get(position).getText2());
+                intent.putExtra("fest_date",list_festArrayList.get(position).getText3());
+                intent.putExtra("fest_describe",list_festArrayList.get(position).getText4());
                 startActivity(intent);
 
             }
@@ -98,7 +98,7 @@ public class FestivalActivity extends AppCompatActivity {
                 String fest_date = c.getString(TAG_fest_date);
                 String fest_describe = c.getString(TAG_fest_describe);
 
-                list_fest lists = new list_fest(R.mipmap.ic_launcher,"행사명 "+"\n"+fest_name,"주최동아리 "+"" +
+                list_item lists = new list_item(R.mipmap.ic_launcher,"행사명 "+"\n"+fest_name,"주최동아리 "+"" +
                         "\n"+fest_club, "행사날짜 "+"\n"+fest_date,"행사내용 "+"\n"+fest_describe);
                 list_festArrayList.add(lists);
             }
