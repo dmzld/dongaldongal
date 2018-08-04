@@ -52,9 +52,9 @@ public class clubListAdapter extends BaseAdapter {
 
             viewHolder = new ViewHolder();
 
-            viewHolder.text_name = (TextView)convertView.findViewById(R.id.text_name);
+            viewHolder.text_name = (TextView)convertView.findViewById(R.id.title);
             viewHolder.text_div = (TextView)convertView.findViewById(R.id.text_div);
-            viewHolder.text_phone = (TextView)convertView.findViewById(R.id.text_phone);
+            viewHolder.text_phone = (TextView)convertView.findViewById(R.id.date);
             viewHolder.text_level  =(TextView)convertView.findViewById(R.id.text_level);
             convertView.setTag(viewHolder);
         }

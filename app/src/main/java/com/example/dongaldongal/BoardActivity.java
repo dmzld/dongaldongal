@@ -63,10 +63,10 @@ public class    BoardActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Intent intent = new Intent(getApplicationContext(),PostActivity.class);
-                intent.putExtra("title",list_itemArrayList.get(position).getText_title());
-                intent.putExtra("content",list_itemArrayList.get(position).getText_content());
-                intent.putExtra("club",list_itemArrayList.get(position).getText_club());
-                intent.putExtra("date",list_itemArrayList.get(position).getText_date());
+                intent.putExtra("title",list_itemArrayList.get(position).getText1());
+                intent.putExtra("content",list_itemArrayList.get(position).getText2());
+                intent.putExtra("club",list_itemArrayList.get(position).getText3());
+                intent.putExtra("date",list_itemArrayList.get(position).getText4());
                 startActivity(intent);
 
             }

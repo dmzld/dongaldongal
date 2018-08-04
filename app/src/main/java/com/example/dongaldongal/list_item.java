@@ -2,57 +2,57 @@ package com.example.dongaldongal;
 
 public class list_item {
 
-    private int image_club;
-    private String text_club;
-    private String text_title;
-    private String text_date;
-    private String text_content;
+    private int image;
+    private String text1;
+    private String text2;
+    private String text3;
+    private String text4;
 
-    public int getImage_club() {
-        return image_club;
+    public int getImage() {
+        return image;
     }
 
-    public void setImage_club(int image_club) {
-        this.image_club = image_club;
+    public void setImage(int image) {
+        this.image = image;
     }
 
-    public String getText_club() {
-        return text_club;
+    public String getText1() {
+        return text1;
     }
 
-    public void setText_club(String text_club) {
-        this.text_club = text_club;
+    public void setText1(String text1) {
+        this.text1 = text1;
     }
 
-    public String getText_title() {
-        return text_title;
+    public String getText2() {
+        return text2;
     }
 
-    public void setText_title(String text_title) {
-        this.text_title = text_title;
+    public void setText2(String text2) {
+        this.text2 = text2;
     }
 
-    public String getText_date() {
-        return text_date;
+    public String getText3() {
+        return text3;
     }
 
-    public void setText_date(String text_date) {
-        this.text_date = text_date;
+    public void setText3(String text3) {
+        this.text3 = text3;
     }
 
-    public String getText_content() {
-        return text_content;
+    public String getText4() {
+        return text4;
     }
 
-    public void setText_content(String text_content) {
-        this.text_content = text_content;
+    public void setText4(String text4) {
+        this.text4 = text4;
     }
 
-    public list_item(int image_club, String text_club, String text_title, String text_date, String text_content) {
-        this.image_club = image_club;
-        this.text_club = text_club;
-        this.text_title = text_title;
-        this.text_date = text_date;
-        this.text_content = text_content;
+    public list_item(int image, String text1, String text2, String text3, String text4) {
+        this.image = image;
+        this.text1 = text1;
+        this.text2 = text2;
+        this.text3 = text3;
+        this.text4 = text4;
     }
 }
