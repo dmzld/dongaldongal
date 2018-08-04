@@ -26,7 +26,7 @@ public class FestivalActivity extends AppCompatActivity {
 
     String myJSON;
     ListView listView;
-    FestListAdapter festAdapter;
+    ItemListAdapter festAdapter;
     ArrayList<list_item> list_festArrayList;
 
 
@@ -103,7 +103,7 @@ public class FestivalActivity extends AppCompatActivity {
                 list_festArrayList.add(lists);
             }
             Collections.reverse(list_festArrayList);
-            festAdapter = new FestListAdapter(FestivalActivity.this,list_festArrayList);
+            festAdapter = new ItemListAdapter(FestivalActivity.this,list_festArrayList);
             listView.setAdapter(festAdapter);
         } catch (JSONException e) {
             e.printStackTrace();
